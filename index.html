@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Enter User Information</h2>
+        </div>
+        <form id="form" class="form" name="form">
+
+            <div class="sucess-msg">
+                <h5>Registration successful</h5>
+            </div>
+
+            <div class="form-control">
+                <label for="first_name">First Name</label>
+                <input type="text" placeholder="Type First name Here" id="first_name" />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+
+            <div class="form-control">
+                <label for="last_name">Last Name</label>
+                <input type="text" placeholder="Type Last name Here" id="last_name" />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+
+            <div class="form-control">
+                <label for="contact_number">Contact Number</label>
+                <input type="number" placeholder="Type Contact Number Here" id="contact_number" />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input type="email" placeholder="Type Email Hear" id="email" />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+
+            <div class="form-control">
+                <label for="payment_type">Payment Type</label>
+                <select name="" id="payment_type">
+                    <option select value="payment_type">Select Payment Type</option>
+                    <option value="full_payment">Full Payment</option>
+                    <option value="half_payment">Half Payment</option>
+
+                </select>
+
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+
+                <small>Error message</small>
+
+            </div>
+
+            <div class="form-control">
+                <label for="user_type">User Type</label>
+                <div class="radio-input" id="radio-input">
+
+                    <!-- <input type="radio" id="summer" value="Summer">Summer<br>
+                    <input type="radio" id="winter" value="Winter">Winter<br>
+                    <input type="radio" id="rainy" value="Rainy">Rainy<br> -->
+
+
+                    <input type="radio" name="user_type" id="school" value="school"> School
+                    <input type="radio" name="user_type" id="university" value="university"> University
+                    <input type="radio" name="user_type" id="employee" value="employee"> Employee
+
+                </div>
+                <small id="error_massage">Error message</small>
+
+            </div>
+
+            <div class="form-control">
+                <label for="user_type">Address</label>
+                <textarea name="address" id="address" cols="30" rows="10"></textarea>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+
+
+            </div>
+
+
+            <button>Submit</button>
+        </form>
+    </div>
+
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
