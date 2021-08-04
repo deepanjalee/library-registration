@@ -12,6 +12,8 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   checkInputs();
+
+  
 });
 
 function checkInputs() {
@@ -24,11 +26,14 @@ function checkInputs() {
 
   if (firstNameValue === "") {
     setErrorFor(first_name, "First name cannot be blank");
+    
   } else {
     setSuccessFor(first_name);
+   
   }
   if (lastNameValue === "") {
     setErrorFor(last_name, "Last name cannot be blank");
+    
   } else {
     setSuccessFor(last_name);
   }
@@ -70,11 +75,36 @@ function checkInputs() {
     document.getElementById("error_massage").innerHTML =
       "Please Select User Type";
   }
+
+
+  if(firstNameValue != "" && lastNameValue != "" 
+  && contactNumberValue != "" && emailValue != "" && addressValue != ""
+  && paymentType.value != "payment_type" && 
+  (!document.getElementById("school").checked || !document.getElementById("university").checked || !document.getElementById("employee").checked )){
+    successMsg();
+  }
 }
 
-// function setRadioError(input, message){
+function successMsg(){
+  // alert('Success');
 
-// }
+  document.getElementById("sucess-msg").style.display =
+      "flex";
+
+      document.getElementById("sucess-msg").innerHTML =
+      "Registration Successfull!";
+  document.querySelector('#first_name').value = '';
+  document.querySelector('#last_name').value = '';
+  document.querySelector('#email').value = '';
+  document.querySelector('#address').value = '';
+  document.querySelector('#contact_number').value = '';
+  document.querySelector('#payment_type').value = 'payment_type';
+  document.querySelector('#school').checked = false;
+  document.querySelector('#university').checked = false;
+  document.querySelector('#employee').checked = false;
+
+  
+}
 
 function setErrorFor(input, message) {
   const formControl = input.parentElement;

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -18,8 +19,8 @@
         </div>
         <form id="form" class="form" name="form">
 
-            <div class="sucess-msg">
-                <h5>Registration successful</h5>
+            <div class="sucess-msg" id="sucess-msg">
+                <h5> success msg</h5>
             </div>
 
             <div class="form-control">
@@ -74,10 +75,6 @@
                 <label for="user_type">User Type</label>
                 <div class="radio-input" id="radio-input">
 
-                    <!-- <input type="radio" id="summer" value="Summer">Summer<br>
-                    <input type="radio" id="winter" value="Winter">Winter<br>
-                    <input type="radio" id="rainy" value="Rainy">Rainy<br> -->
-
 
                     <input type="radio" name="user_type" id="school" value="school"> School
                     <input type="radio" name="user_type" id="university" value="university"> University
@@ -90,7 +87,7 @@
 
             <div class="form-control">
                 <label for="user_type">Address</label>
-                <textarea name="address" id="address" cols="30" rows="10"></textarea>
+                <textarea name="address" id="address" cols="30" rows="10" placeholder="Type Address hear"></textarea>
                 <i class="fas fa-check-circle"></i>
                 <i class="fas fa-exclamation-circle"></i>
                 <small>Error message</small>
